@@ -1,0 +1,36 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	img: string;
+}
+
+const { img, title, body } = Astro.props;
+const baseImgUrl = "/img/products/";
+const imgSrc = baseImgUrl + img;
+
+---
+
+<div class="flex flex-col div-productos items-center">
+    <img src={imgSrc} class="text-white w-full max-w-full" alt={title} />
+    <div class="flex flex-col gap-3 py-8">
+        <h2 class="text-center productos-title my-3 text-2xl font-semibold text-[#ff6600]">
+            {title}
+        </h2>
+        <div class="text-center">
+            <a href="" class="text-white bg-orange-500 p-2 rounded">Ver más</a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .div-productos{
+		background: #1D1D1B;
+		border: 3px solid #fff;
+		color: #fff;
+	}
+	.productos-title{
+		color: #fff;
+	}
+</style>

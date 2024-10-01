@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+---
+
+<Layout title="Maqueta Landing Page">
+	<Header/>
+	<main>
+		<section id="contacto" class="section pb-10 pt-16 bg-[#afaba8]">
+            <div class="py-5 bg-orange-500 text-white">
+                <h1 class="text-center text-4xl mb-5 font-bold">Contacto</h1>
+                <p class="text-center text-lg">Si usted desea que le cotizemos nuestro servicio, rellene el siguiente formulario y nosotros  nos contactaremos con usted a la brevedad</p>
+            </div>
+			<div class="container py-16" style="margin:0 auto">
+				<div class="grid md:grid-cols-2 grid-cols-1 gap-10">
+					<div class="bg-[#252525] flex flex-col md:text-left text-center px-10 py-5 rounded-lg">
+						<div class="container">
+							<h3 class="text-2xl font-bold text-center text-white">Puedes contactarnos por los siguientes medios:</h3>
+							<div class="my-5">
+								<h4 class="text-lg font-bold text-white">Dirección</h4>
+								<p class="text-white text-md">Salta, Argertina</p>
+							</div>
+							<div class="my-5">
+								<h4 class="text-lg font-bold text-white">E-mail</h4>
+								<p class="text-white text-md">info@alumell.com</p>
+								<p class="text-white text-md">atencion@alumell.com</p>
+							</div>
+							<div class="my-5">
+								<h4 class="text-lg font-bold text-white">Teléfono</h4>
+								<p class="text-white text-md">+541234567</p>
+								<p class="text-white text-md">+547654321</p>
+							</div>
+						</div>
+					</div>
+					<div class="bg-white shadow-xl p-5 rounded-lg">
+						<h3 class="mb-5 text-2xl font-bold text-center">Contacta con nuestro equipo</h3>
+						<form action="" class="flex flex-col gap-5">
+							<input class="border-2 rounded p-2 bg-[#fefefe]" type="text" name="name" id="name" placeholder="Nombre">
+							<input class="border-2 rounded p-2 bg-[#fefefe]" type="email" name="email" id="email" placeholder="E-mail">
+							<textarea class="border-2 rounded p-2 bg-[#fefefe]" name="message" id="message" placeholder="Mensaje"></textarea>
+							<buttom type="submit" value="" placeholder="Enviar" class="text- bg-[#ff6600] text-white rounded p-2">Enviar</buttom>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer/>
+</Layout>

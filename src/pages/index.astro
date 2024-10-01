@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Product from '../components/Product.astro';
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+---
+<Layout title="Maqueta Landing Page">
+	<Header />
+	<main>
+		<section class="section bg-black relative pt-16">
+			<div class="container max-w-5xl absolute z-10 text-white md:p-10 p-5" style="margin:0 auto;top:50%;left:50%;transform:translate(-50%, -50%);">
+				<h1 class="text-center text-5xl my-5 font-bold" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">Bienvenidos a Allumel</h1>
+				<p class="text-lg font-medium text-center md:block hidden" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas delectus temporibus est repellendus culpa quasi neque itaque dicta ad maiores.</p>
+				<div class="flex sm:flex-row flex-col text-center py-5 gap-5 justify-center">
+					<a href="" class="no-underline text-lg font-bold bg-[#ff6600] text-white p-2 rounded-md flex gap-4">
+						<img src="/img/ico-telefono.svg" alt="LOGO ALUMELL" width="24" height="24"> 
+						Llamar a telefono
+					</a>
+					<a href="" class="no-underline text-lg font-bold bg-[#ff6600] text-white p-2 rounded-md flex gap-4">
+						<img src="/img/ico-whatsapp.svg" alt="LOGO ALUMELL" width="24" height="24"> 
+						Whatsapp
+					</a>
+				</div>
+			</div>
+			<div class="sldr sldr-container" id="carrusel">
+				<ul class="sldr-ul">
+					<li class="sldr-li p-0 m-0">
+						<img src="/img/carrusel.webp" class="sldr-img" alt="">
+					</li>
+					<li class="sldr-li p-0 m-0">
+						<img src="/img/carrusel-2.webp" class="sldr-img" alt="">
+					</li>
+					<li class="sldr-li p-0 m-0">
+						<img src="/img/carrusel-3.webp" class="sldr-img" alt="">
+					</li>
+				</ul>
+				<div class="sldr-btn">
+					<div class="sldr-prv"><img src="/img/iconos/flecha-izquierda.svg" style="width:24px;height:24px"></div>
+					<div class="sldr-nxt"><img src="/img/iconos/flecha-derecha.svg" style="width:24px;height:24px"></div>
+				</div>
+			</div>
+		</section>
+		<section class="section p-10 bg-[#afaba8]">
+			<div class="container" style="margin:0 auto;max-width:1200px;" >
+				<h2 class="text-center text-4xl my-5 font-bold">Productos Destacados</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-5" id="#productos">
+					<Product img="image-not-found.png" title='Producto 1' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 2' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 3' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 4' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+				</div>
+				<div class="text-center py-3">
+					<a href="" class="text-white bg-orange-500 p-3 rounded text-xl" style="margin:0 auto;">Ver catalogo</a>
+				</div>
+			</div>
+		</section>
+		<section class="section p-10 bg-white">
+			<div class="container" style="margin:0 auto">
+				<div class="grid md:grid-cols-2 grid-cols-1 gap-10">
+					<div class="flex flex-col md:text-left text-center">
+						<h2 class="text-4xl mb-5 font-bold">Acerca de Nosotros</h2>
+						<p class="text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta fugiat, sapiente illum aliquid quasi eaque culpa. Blanditiis fugit labore nemo iusto deserunt, tenetur eaque alias, soluta neque, odio adipisci voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, voluptatem! Facere hic suscipit porro non inventore recusandae odio totam, quia cum voluptatem nesciunt iusto, nostrum nobis, accusantium ut deleniti fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="text-center mt-10">
+							<a href="/nosotros" class="text-white bg-orange-500 p-3 rounded text-xl w-full md:w-fit">Ver más</a>
+						</div>
+					</div>
+					<div>
+						<img src="/img/imagen-nosotros.webp" alt="Nuestra  empresa"> 
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="servicios" class="section p-10 bg-[#afaba8]">
+			<div class="container" style="margin:0 auto">
+				<h2 class="text-center text-4xl my-5 font-bold">Servicios</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-5" id="#servicios">
+					<Card img="headset-outline" title='Servicio 1' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+					<Card img="flash-outline" title='Servicio 2' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+					<Card img="star-outline" title='Servicio 3' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+					<Card img="stats-chart-outline" title='Servicio 4' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

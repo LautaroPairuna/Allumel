@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Product from '../components/Product.astro';
+---
+
+<Layout title="Maqueta Landing Page">
+	<Header/>
+	<main>
+		<section class="section pb-10 pt-16 bg-[#afaba8]">
+            <div class="py-8 bg-orange-500 text-white">
+                <h1 class="text-center text-4xl mb-5 font-bold">Todos los productos</h1>
+            </div>
+			<div class="container py-16" style="margin:0 auto;max-width:1200px;" >
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-5" id="#productos">
+					<Product img="image-not-found.png" title='Producto 1' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 2' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 3' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 4' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+                    <Product img="image-not-found.png" title='Producto 5' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 6' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 7' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+					<Product img="image-not-found.png" title='Producto 8' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Product>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer/>
+</Layout>

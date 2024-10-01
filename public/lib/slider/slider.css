@@ -1,0 +1,153 @@
+.sldr {
+    position: relative;
+    overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+}
+.sldr-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Flexbox para alinear horizontalmente */
+    transition: transform 1s ease-in-out; /* Transición suave para el movimiento */
+}
+.sldr-li {
+    min-width: 100%; /* Asegura que cada diapositiva ocupe todo el ancho del contenedor */
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+}
+.sldr-img {
+    width: 100%;        /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%;       /* Asegura que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover;  /* Cubre el área del contenedor manteniendo la relación de aspecto */
+    aspect-ratio: 21/9;
+    opacity: 0.5;
+}
+.sldr-tit{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.8);
+}
+.sldr-spn{
+    position: absolute;
+    top: 60px;
+    /*background: hsl(0, 1%, 72%, .1);*/
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.8);
+}
+.sldr-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Evita que los botones interfieran con el contenido */
+    padding: 0 15px; /* Ajusta el espaciado horizontal */
+}
+.sldr-nxt, .sldr-prv {
+    pointer-events: all; /* Permite la interacción con los botones */
+    cursor: pointer;
+    z-index: 2;
+}
+.sldr-grd{
+    display:grid;
+    width:100%;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:0;
+    box-sizing:border-box
+}
+.sldr-lda-cnt{
+    position:relative;
+    cursor:pointer;
+}
+.sldr-lda-cnt.active .sldr-lda{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+.sldr-lda-cnt.active .sldr-lda{
+    background:#DE0A18 !important;
+    color:#fff;
+}
+.sldr-lda-cnt.active::after{
+    border-bottom: 13px solid #8b0710;
+    border-left: 8px solid #0000;
+    border-right: 8px solid #0000;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    top: -12px;
+    width: 0;
+}
+.sldr-lda-cnt.active::before{
+    content: "";
+    margin-top: 13px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.sldr-lda{
+    border-top: 5px solid #8b0710;
+    background-color:#8b0710;
+    box-shadow: 0 0 3px -1px rgba(0,0,0,0.40) inset;
+    color:rgba(255,255,255,0.8);
+    padding:0.325rem;
+    text-align:center;
+    font-size:12px;
+}
+.sldr-lda{
+    display: none;
+}
+/*
+.sldr-lda:last-child{
+    border-right:1px solid #DE0A18;
+}*/
+@keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
+@media(max-width: 768px){
+    /*
+    .sldr-grd{
+        grid-template-rows:1fr !important;
+        grid-template-columns:1fr 1fr !important;
+    }*/
+    .sldr-lda{
+        border-top: 0;
+        box-shadow: 0 0 3px -1px rgba(0,0,0,0.40) inset;
+    }
+    .sldr-lda-cnt.active::after{
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    .sldr-grd{
+        grid-template-rows:1fr !important;
+        grid-template-columns:1fr !important;
+    }
+    .sldr-img {
+        aspect-ratio: 16/9 !important;
+    }
+    
+}
+@media(max-width: 560px){
+    .sldr-img {
+        aspect-ratio: 1/1 !important;
+    }
+    .sldr-lda, .sldr-btn{
+        display: none !important;
+    }
+}

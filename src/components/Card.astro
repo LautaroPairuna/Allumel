@@ -1,0 +1,79 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	img: string;
+}
+
+const { img, title, body } = Astro.props;
+---
+
+<li class="list-servicios py-5">
+	<div class="text-center">
+		<ion-icon name={img} class="text-5xl rotate-center text-white"></ion-icon>
+	</div>
+	<div>
+		<h2 class="text-center servicios-title mb-3 font-semibold">
+			{title}
+		</h2>
+		<p class="text-center servicios-desc px-3">
+			{body}
+		</p>
+	</div>
+</li>
+<style>
+	.list-servicios{
+		list-style: none;
+		background: #1D1D1B;
+		border: 3px solid #fff;
+		color: #fff;
+		border-radius: 1rem;
+	}
+	.servicios-title{
+		color: #fff;
+	}
+	.list-servicios:hover{
+		background: #1B1B1D;
+		transition: all 0.5s;
+	}
+	.list-servicios:hover .servicios-title{
+		color:#ff6600;
+		transition: all 0.5s;
+	}
+	.servicios-desc {
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: opacity 1s, max-height 1s;
+	}
+
+	.list-servicios:hover .servicios-desc {
+		opacity: 1;
+		max-height: 500px; 
+		transition: opacity 1.5s, max-height 1.5s;
+	}
+	.list-servicios:hover .rotate-center {
+		-webkit-animation: rotate-center 0.6s ease-in-out both;
+				animation: rotate-center 0.6s ease-in-out both;
+	}
+	@-webkit-keyframes rotate-center {
+		0% {
+		-webkit-transform: rotate(0);
+				transform: rotate(0);
+		}
+		100% {
+		-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		}
+	}
+	@keyframes rotate-center {
+		0% {
+		-webkit-transform: rotate(0);
+				transform: rotate(0);
+		}
+		100% {
+		-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		}
+	}
+</style>
