@@ -8,29 +8,32 @@ interface Props {
 const { img, title, body } = Astro.props;
 const baseImgUrl = "/img/products/";
 const imgSrc = baseImgUrl + img;
-
 ---
 
-<div class="flex flex-col div-productos items-center">
-    <img src={imgSrc} class="text-white w-full max-w-full" alt={title} />
-    <div class="flex flex-col gap-3 py-8">
-        <h2 class="text-center productos-title my-3 text-2xl font-semibold text-[#ff6600]">
+<div class="flex flex-col div-productos items-center rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-5">
+    <img src={imgSrc} class="w-full max-w-full rounded-t-lg object-cover h-48" alt={title} />
+    <div class="flex flex-col gap-3 py-6 px-4">
+        <h2 class="text-center productos-title my-3 text-2xl font-semibold">
             {title}
         </h2>
+        <p class="text-center text-gray-300 mb-4">{body}</p>
         <div class="text-center">
-            <a href="" class="text-white bg-orange-500 p-2 rounded">Ver más</a>
+            <a href="" class="text-white bg-orange-500 hover:bg-orange-600 transition-colors p-3 rounded-lg text-lg">
+                Ver más
+            </a>
         </div>
     </div>
 </div>
 
-
 <style>
-    .div-productos{
-		background: #1D1D1B;
+    .div-productos {
+		background-color: #1D1D1B;
 		border: 3px solid #fff;
 		color: #fff;
+		max-width: 100%;
+		overflow: hidden;
 	}
-	.productos-title{
-		color: #fff;
+	.productos-title {
+		color: #ff6600;
 	}
 </style>

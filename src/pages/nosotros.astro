@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
+import Card from '../components/Card.astro';
 ---
 
-<Layout title="Maqueta Landing Page">
+<Layout title="Allumel - Acerca de Nosotros">
 	<Header/>
 	<main>
 		<section id="nosotros" class="section pb-10 pt-16 bg-white">
@@ -19,6 +20,17 @@ import Footer from '../components/footer/Footer.astro';
 					<div class="col-span-8 md:text-left text-center">
 						<p class="text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta fugiat, sapiente illum aliquid quasi eaque culpa. Blanditiis fugit labore nemo iusto deserunt, tenetur eaque alias, soluta neque, odio adipisci voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, voluptatem! Facere hic suscipit porro non inventore recusandae odio totam, quia cum voluptatem nesciunt iusto, nostrum nobis, accusantium ut deleniti fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section id="servicios" class="section p-10 bg-[#afaba8]">
+			<div class="container" style="margin:0 auto">
+				<h2 class="text-center text-4xl my-5 font-bold">Porque elegirnos a Nosotros</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-5" id="#servicios">
+					<Card img="headset-outline" title='Servicio 1' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+					<Card img="flash-outline" title='Servicio 2' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+					<Card img="star-outline" title='Servicio 3' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
+					<Card img="stats-chart-outline" title='Servicio 4' body='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sit ea sunt, quis assumenda recusandae aperiam nostrum quo voluptas.'></Card>
 				</div>
 			</div>
 		</section>

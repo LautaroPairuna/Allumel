@@ -22,7 +22,7 @@
     height: 100%;       /* Asegura que la imagen ocupe todo el alto del contenedor */
     object-fit: cover;  /* Cubre el área del contenedor manteniendo la relación de aspecto */
     aspect-ratio: 21/9;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .sldr-tit{
     position: absolute;
